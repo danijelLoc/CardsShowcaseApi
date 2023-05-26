@@ -1,14 +1,14 @@
 package com.example.CardSpringBootApi.controller;
 
-import com.example.CardSpringBootApi.service.CardGenerationService;
+import com.example.CardSpringBootApi.service.ICardGenerationService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/card-request")
 public class CardGenerationController {
-    private final CardGenerationService cardGenerationService;
+    private final ICardGenerationService cardGenerationService;
 
-    public CardGenerationController(CardGenerationService cardGenerationService) {
+    public CardGenerationController(ICardGenerationService cardGenerationService) {
         this.cardGenerationService = cardGenerationService;
     }
 

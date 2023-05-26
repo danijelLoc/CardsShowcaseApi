@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Component
-public class SimpleCardRequestWriter implements CardRequestWriter {
+public class SimpleCardRequestWriter implements ICardRequestWriter {
 
     @Override
     public void updateCardRequestFile(String cardRequestPath, List<String> userDescriptionElements, Boolean createIfNonExistent) {

@@ -1,21 +1,21 @@
 package com.example.CardSpringBootApi.controller;
 
 import com.example.CardSpringBootApi.dto.UserDto;
-import com.example.CardSpringBootApi.mapper.UserMapper;
+import com.example.CardSpringBootApi.mapper.IUserMapper;
 import com.example.CardSpringBootApi.model.User;
-import com.example.CardSpringBootApi.service.CardGenerationService;
-import com.example.CardSpringBootApi.service.UserService;
+import com.example.CardSpringBootApi.service.ICardGenerationService;
+import com.example.CardSpringBootApi.service.IUserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
 
-    private final UserMapper userMapper;
-    private final UserService userService;
-    private final CardGenerationService cardGenerationService;
+    private final IUserMapper userMapper;
+    private final IUserService userService;
+    private final ICardGenerationService cardGenerationService;
 
-    public UserController(UserMapper userMapper, UserService userService, CardGenerationService cardGenerationService) {
+    public UserController(IUserMapper userMapper, IUserService userService, ICardGenerationService cardGenerationService) {
         this.userMapper = userMapper;
         this.userService = userService;
         this.cardGenerationService = cardGenerationService;
